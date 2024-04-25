@@ -48,4 +48,5 @@ model = @set model.m = Chain(model.m, Dense(neurons, 10))
 
 model(data[2])
 
-stochastic_mask = ExplainMill.explain(GradExplainer(), data[1], model, pruning_method=:Flat_HAdd, rel_tol=0.1)
+stochastic_mask = ExplainMill.explain(GradExplainer(), data[1], model, pruning_method=:Flat_HAdd, rel_tol=0.1) #ERROR: DimensionMismatch: variable with size(x) == (1, 0) cannot have a gradient with size(dx) == (32, 0)
+
